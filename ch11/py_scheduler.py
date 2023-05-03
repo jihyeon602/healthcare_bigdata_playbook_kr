@@ -30,14 +30,8 @@ def doUpload_barchart():
   print('done doUpload_barchart')
 
 
-# # 매 1분에 한번 실행
-# schedule.every(1).minutes.do(doUpload_barchart)
-
-# # 매일 오전 0시 30분에 한번 실행
-# schedule.every().day.at("00:30").do(doUpload_barchart)
-
-
-schedule.every().day.at("16:12").do(doUpload_barchart)
+# 매일 오전 0시 10분에 한번 실행
+schedule.every().day.at("00:10").do(doUpload_barchart)
 
 
 def main():
