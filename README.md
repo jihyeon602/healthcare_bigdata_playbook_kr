@@ -12,7 +12,10 @@ http://www.acornpub.co.kr/book/healthcare-big-data
 
 
 ## 온라인 도서점
-https://product.kyobobook.co.kr/detail/S000203014238
-https://www.yes24.com/Product/Goods/120014688
-https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320292589&start=slayer
+* https://product.kyobobook.co.kr/detail/S000203014238
+* https://www.yes24.com/Product/Goods/120014688
+* https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=320292589&start=slayer
 
+## 도서 오류 신고
+하기 사이트에서 "정정 및 오류" 신고해 주세요
+* http://www.acornpub.co.kr/book/healthcare-big-data#submit
