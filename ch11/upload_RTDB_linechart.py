@@ -43,8 +43,8 @@ dbRef = db.reference()
 
 act = pd.read_csv('OTg6QzA_activities.csv')
 
-#22년1월1일 데이터만 추출해서, 가시화를 해보자
-data220101 = act[ (act['timestamp'] >= '2022-01-01 00:00:00.000')  & (act['timestamp'] < '2022-01-02 00:00:00.000') ].copy()
+# 22년1월1일 데이터만 추출해서, 가시화를 해보자
+data220101 = act[ (act['timestamp'] >= '2022-01-01 00:00:00.000') & (act['timestamp'] < '2022-01-02 00:00:00.000') ].copy()
 
 data220101['p_timestamp'] = data220101.timestamp.shift(1)
 data220101['p_x'] = data220101['X'].shift(1)
@@ -66,8 +66,6 @@ cleaned = cleaned.set_index('timestamp')
 # 10분단위로 리샘플링
 tenmin = cleaned.resample('10min')
 result = tenmin['calc_act'].agg(['mean'])
-# print(result)
-# print(result.dtypes)
 
 # 칼럼 이름 변경하기
 result['hm'] = result.index.values
@@ -78,9 +76,7 @@ result.fillna(0, inplace=True)
 
 updates = result.to_dict(orient='records')
 
-print(updates)
-
-# # device 노드 찾기
+# device 노드 찾기
 dbDevice = dbRef.child('OTg6QzA')
 dbDevice.child('2022-01-01').set( updates )
 

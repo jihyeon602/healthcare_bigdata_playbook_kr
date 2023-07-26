@@ -14,7 +14,6 @@ default_app = firebase_admin.initialize_app(cred, {
 })
 
 
-
 def doUpload_barchart():
   print("do doUpload_barchart")
 
